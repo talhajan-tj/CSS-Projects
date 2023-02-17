@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  transition: all 0.5s;
+}
+body {
+  background-color: #fff;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+h1 {
+  position: relative;
+  font-size: 110px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+h1::before {
+  content: "talha";
+  position: absolute;
+  font-size: 110px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+  transition: all 1s;
+}
+h1:hover::before {
+  width: 100%;
+}

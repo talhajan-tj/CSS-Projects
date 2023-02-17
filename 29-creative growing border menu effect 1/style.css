@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  padding: 15px 0;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  position: relative;
+  transition: all 0.5s;
+  margin: 0 5px;
+  display: block;
+}
+.menu a::before,
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.5s;
+  transform: scaleX(0);
+}
+.menu a::before {
+  left: 0;
+  top: 0;
+  transform-origin: left;
+}
+.menu a::after {
+  right: 0;
+  bottom: 0;
+  transform-origin: right;
+}
+
+.menu a:hover::before,
+.menu a:hover::after {
+  transform: scaleX(1);
+}

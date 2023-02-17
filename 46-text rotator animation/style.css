@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  transition: all 0.5s;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 28px;
+  color: #4b4a4a;
+}
+
+span::before {
+  content: "Awesome";
+  color: coral;
+  font-size: 32px;
+  line-height: 38px;
+  animation: words 3s infinite linear;
+}
+@keyframes words {
+  0% {
+    content: "Awesome";
+  }
+  50% {
+    content: "Sweet";
+  }
+  100% {
+    content: "Amazing";
+  }
+}

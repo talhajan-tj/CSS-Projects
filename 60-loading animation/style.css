@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  transition: all 0.5s;
+}
+body {
+  background-color: #333;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 70px;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+h1::before {
+  content: "loading...";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: rgb(255, 238, 0);
+  border-right: 4px solid rgb(255, 238, 0);
+  animation: load 5s infinite linear;
+  overflow: hidden;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}

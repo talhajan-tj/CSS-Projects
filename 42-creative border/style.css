@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  transition: all 0.5s;
+}
+body {
+  background-color: #fff;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.border,
+.rotate {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  text-align: center;
+}
+h1 {
+  transform: translateY(70%) rotate(-40deg);
+}
+.rotate {
+  transform: rotate(40deg);
+}
+.border::before,
+.border::after,
+.rotate::before,
+.rotate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+.border::before,
+.rotate::before {
+  border-top: 3px solid green;
+  border-bottom: 3px solid green;
+  transform: scaleX(0);
+}
+.border::after,
+.rotate::after {
+  border-right: 3px solid green;
+  border-left: 3px solid green;
+  transform: scaleY(0);
+}
+.border:hover::before {
+  transition-delay: 0;
+}
+.border:hover::after {
+  transition-delay: 0.5s;
+}
+.border:hover .rotate::before {
+  transition-delay: 1s;
+}
+.border:hover .rotate::after {
+  transition-delay: 1.5s;
+}
+.border:hover::before,
+.border:hover .rotate::before {
+  transform: scaleX(1);
+}
+.border:hover::after,
+.border:hover .rotate::after {
+  transform: scaleY(1);
+}

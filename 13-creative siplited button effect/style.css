@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  color: #f6b93b;
+  border: 2px solid #f6b93b;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 30px 50px;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 1;
+  overflow: hidden;
+}
+
+a::before,
+a::after,
+span::before,
+span::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s;
+  background-color: #f6b93b;
+}
+a::before {
+  top: 0%;
+  left: -25%;
+}
+a::after {
+  top: -100%;
+  left: 25%;
+  transition-delay: 0.1s;
+}
+span::before {
+  top: 0%;
+  right: -25%;
+  transition-delay: 0.2s;
+}
+span::after {
+  bottom: -100%;
+  right: 25%;
+  transition-delay: 0.3s;
+}
+a:hover {
+  color: #000;
+}
+a:hover::before {
+  top: 0%;
+  left: 0%;
+}
+a:hover::after {
+  top: 0%;
+  left: 25%;
+}
+a:hover span::before {
+  top: 0%;
+  right: 0%;
+}
+a:hover span::after {
+  bottom: 0%;
+  right: 25%;
+}

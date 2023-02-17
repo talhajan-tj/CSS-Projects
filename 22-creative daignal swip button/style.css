@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  color: #0a3d62;
+  font-size: 32px;
+  font-weight: 500;
+  width: 200px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  position: relative;
+  transition: all 1s;
+  border: 3px solid #0a3d62;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+a:hover {
+  color: #fff;
+}
+/* Video Tutorial Approch */
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 1s;
+  border-top: 40px solid #0a3d62;
+  border-bottom: 40px solid #0a3d62;
+}
+a::before {
+  border-right: 40px solid transparent;
+  transform: translateX(-100%);
+}
+a::after {
+  border-left: 40px solid transparent;
+  transform: translateX(100%);
+}
+a:hover::before,
+a:hover::after {
+  transform: translateX(0);
+}
+
+/* My Approch */
+/* 
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+a::before,
+a::after,
+span::before,
+span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #0a3d62;
+  transition: all 1s;
+  transform: rotate(5deg);
+  z-index: -1;
+}
+a::before {
+  top: -10px;
+  left: -10px;
+}
+a::after {
+  bottom: -10px;
+  left: -10px;
+}
+span::before {
+  top: -10px;
+  right: -10px;
+}
+span::after {
+  bottom: -10px;
+  right: -10px;
+}
+a:hover::before,
+a:hover::after,
+a:hover span::before,
+a:hover span::after {
+  width: 100%;
+  height: 100%;
+} */

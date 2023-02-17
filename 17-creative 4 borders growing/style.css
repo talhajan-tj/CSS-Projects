@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  color: #000;
+  font-size: 32px;
+  letter-spacing: 0.7em;
+  font-weight: 500;
+  padding: 15px 0;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+a span {
+  position: relative;
+  padding: 15px 50px;
+}
+a::before,
+a::after,
+span::before,
+span::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4%;
+  background-color: #000;
+  transition: all 1s;
+}
+a::before {
+  top: 0;
+  left: 0;
+}
+a::after {
+  bottom: 0;
+  right: 0;
+}
+span::before {
+  bottom: 0;
+  left: 0;
+  width: 1%;
+  height: 0;
+}
+span::after {
+  top: 0;
+  right: 0;
+  width: 1%;
+  height: 0;
+}
+
+a:hover::before,
+a:hover::after {
+  width: 100%;
+}
+
+a:hover span::before,
+a:hover span::after {
+  height: 100%;
+}

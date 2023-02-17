@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  color: #f6b93b;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 30px 50px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  transition: all 1s;
+}
+a::before {
+  width: 200px;
+  height: 90px;
+  left: 0;
+  top: -3px;
+  border-left: 2px solid red;
+  border-right: 2px solid #f6b93b;
+}
+a::after {
+  width: 230px;
+  height: 60px;
+  left: -12px;
+  top: 10px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid #f6b93b;
+  transition-delay: 0.2s;
+}
+a:hover::before {
+  transform: rotateY(180deg);
+}
+a:hover::after {
+  transform: rotateX(180deg);
+}

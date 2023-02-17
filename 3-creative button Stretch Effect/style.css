@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  background-color: transparent;
+  border: 3px solid rgb(247, 4, 4);
+  color: rgb(247, 4, 4);
+  font-size: 24px;
+  letter-spacing: -2px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 30px 50px;
+  transition: all 0.5s ease-in;
+}
+a:hover {
+  border: 5px solid rgb(156, 4, 4);
+  color: rgb(156, 4, 4);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 10px;
+}

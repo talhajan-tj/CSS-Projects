@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 100vh;
+  perspective: 500px;
+}
+button {
+  width: 200px;
+  height: 50px;
+  background-color: blue;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  transition-property: background-color transform;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.5s;
+}
+button:hover {
+  background-color: green;
+  transform: translate(600px, 0);
+}
+img {
+  width: 200px;
+  height: 200px;
+  transition: transform 2s ease-in-out;
+  /* transform-origin: bottom left; */
+}
+img:hover {
+  /* transform: translate(300px, 300px); */
+  /* transform: scale(1.5); */
+  /* transform: rotate(30deg); */
+  transform: rotatez(90deg);
+  /* transform: skew(20deg, 30deg); */
+  /* transform: translateZ(400px); */
+}

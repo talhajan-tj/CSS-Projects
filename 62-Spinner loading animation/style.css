@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  transition: all 0.5s;
+}
+body {
+  background-color: #eee;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.spin {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+span {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  position: relative;
+}
+span::before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  top: -17px;
+  width: 220%;
+  height: 220%;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #0bfa02;
+  border-right: 5px solid #0bfa02;
+  animation: antiRotate 2s infinite linear;
+  border-radius: 50%;
+}
+.spin::before,
+.spin::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  border-radius: 50%;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.spin::before {
+  border-left: 5px solid #008000;
+  border-right: 5px solid #008000;
+  animation: antiRotate 2s infinite linear;
+  width: 90%;
+  height: 90%;
+  left: 3px;
+  top: 3px;
+}
+.spin::after {
+  border-left: 5px solid #002280;
+  border-right: 5px solid #002280;
+  animation: rotate 2s infinite linear;
+  width: 60%;
+  height: 60%;
+  left: 25px;
+  top: 25px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes antiRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
